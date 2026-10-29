@@ -1,6 +1,6 @@
-**Date**<br>
-**Course Code & Course Name**<br>
-**Student's First Name & Last Name**<br>
+**November 5th,2026**<br>
+**MPAD2003A Introductory Data Storytelling**<br>
+**Amr Saad**<br>
 **Presented to Jean-Sébastien Marier**<br>
 
 # Deliverable 2: Exploratory Data Analysis (EDA)
@@ -26,9 +26,13 @@ And to create an unordered list, we simply put a star (`*`) before each item.
 
 Use two hashtag symbols (`##`) to create a level 2 heading like this one.
 
+I will be analyzing a dataset that provides information about the amount of film and TV productions in Ontario from 2004 to 2024. This information includes the type of production, the year it was produced, if it is domestic or foreign, and the amount of money spent on each type.
+
+* [Link for my original dataset](https://www.ontariocreates.ca/uploads/About-Us/Eng/open-dataontario-film-and-tv-production-by-type-or-production-Dec-2025.xlsx)
+
 To include a screen capture, use the sample code below. Your images should be saved in the same folder as your `.md` file.
 
-![](import-screen-capture.png)<br>
+![](after-import.png)<br>
 *Figure 1: The "Import file" prompt on Google Sheets.*
 
 **Here are examples of functions and lines of code put in grey boxes:**
