@@ -69,19 +69,36 @@ I picked that timeframe specifically because it was around the same time Netflix
 
 ### 2.1. VIMO Analysis
 
-Use three hashtag symbols (`###`) to create a level 3 heading like this one. Please follow this template when it comes to level 1 and level 2 headings. However, you can use level 3 headings as you see fit.
+I did a bar chart with the data I have to detect invalid values, and that made me notice that some values in column c are misspelled which results in them getting duplicated in the chart.
 
-Insert text here.
-
-Support your claims by citing relevant sources. Please follow [APA guidelines for in-text citations](https://apastyle.apa.org/style-grammar-guidelines/citations).
-
-**For example:**
-
-As seen in Bounegru & Gray (2011), a data visualization should be clear...
+![](bar-chart.png)<br>
+*Figure 2: Bar chart of dataset.*
 
 ### 2.2. Cleaning Data
 
-Insert text here.
+I used the find and replace tool to correct the misspelled values. 
+
+Television Series was spelled as “Televison”, so I corrected that.
+
+![](find-replace1.png)<br>
+*Figure 3: Find and Replace Demonstration.*
+
+"Mini-series" had a hyphen while some values did not, so I corrected that too.
+
+![](find-replace2.png)<br>
+*Figure 4: Find and Replace Demonstration.*
+
+I then exported my sheet and uploaded it into OpenRefine. I changed the row number from 50 to 500 so my entire dataset appears. I then pressed on the “Type of Production” column and selected “Text Filter” from the dropdown menu. I copy pasted the “Television movies, Mini-Series, Special, Pilots” value in the text input and then pressed “invert”. I decided to remove all rows with this value because I thought they were unnecessary for the rest of this project. Then, I exported my dataset from “OpenRefine” as an .xls file and reuploaded it into my Google Sheets file. When uploading, I added it into a new sheet named “After OpenRefine Edits” so it is clear that this is the latest version of my dataset.
+
+
+![](open-refine.png)<br>
+*Figure 5: Editing my dataset using OpenRefine.*
+
+Then I froze the first row and bolded the values so it is clear that all text in these cells were my headings for each column.
+
+![](after-cleaning.png)<br>
+*Figure 6: Screen capture of dataset after all cleaning processes.*
+
 
 ### 2.3. Analyzing Data
 
