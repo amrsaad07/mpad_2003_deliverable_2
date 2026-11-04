@@ -32,7 +32,7 @@ I will be analyzing a dataset that provides information about the amount of film
 I downloaded the dataset as a xlsx file on my device, then imported it on Google Sheets by pressing file, import, upload, then locating the file on my device, and lastly pressing import data into a new spreadsheet.
 
 
-![](after-import.png)<br>
+<img src="after-import.png" width="800"> <br>
 *Figure 1: My datasheet after importation.*
 
 * [The public link to my Google Sheets spreadsheet](https://docs.google.com/spreadsheets/d/1Tb3NKxemoU-d1DJCOfOgenYs0zpPFrB6O0Iu2H_HTGw/edit?usp=sharing)
@@ -71,7 +71,9 @@ I picked that timeframe specifically because it was around the same time Netflix
 
 I did a bar chart with the data I have to detect invalid values, and that made me notice that some values in column c are misspelled which results in them getting duplicated in the chart.
 
-![](bar-chart.png)<br>
+<img src="bar-chart.png" width="500"> <br>
+
+
 *Figure 2: Bar chart of dataset.*
 
 ### 2.2. Cleaning Data
@@ -80,43 +82,67 @@ I used the find and replace tool to correct the misspelled values.
 
 Television Series was spelled as “Televison”, so I corrected that.
 
-![](find-replace1.png)<br>
-*Figure 3: Find and Replace Demonstration.*
+<img src="find-replace1.png" width="350"> <br>
+
+*Figure 3: Screen capture of Find & Replace method used.*
 
 "Mini-series" had a hyphen while some values did not, so I corrected that too.
 
-![](find-replace2.png)<br>
-*Figure 4: Find and Replace Demonstration.*
+<img src="find-replace2.png" width="350"> <br>
+*Figure 4: Screen capture of Find & Replace method used.*
 
 I then exported my sheet and uploaded it into OpenRefine. I changed the row number from 50 to 500 so my entire dataset appears. I then pressed on the “Type of Production” column and selected “Text Filter” from the dropdown menu. I copy pasted the “Television movies, Mini-Series, Special, Pilots” value in the text input and then pressed “invert”. I decided to remove all rows with this value because I thought they were unnecessary for the rest of this project. Then, I exported my dataset from “OpenRefine” as an .xls file and reuploaded it into my Google Sheets file. When uploading, I added it into a new sheet named “After OpenRefine Edits” so it is clear that this is the latest version of my dataset.
 
 
-![](open-refine.png)<br>
-*Figure 5: Editing my dataset using OpenRefine.*
+<img src="open-refine.png" width="800"> <br>
+*Figure 5: Screen capture of OpenRefine edits.*
 
 Then I froze the first row and bolded the values so it is clear that all text in these cells were my headings for each column.
 
-![](after-cleaning.png)<br>
+<img src="after-cleaning.png" width="800"> <br>
 *Figure 6: Screen capture of dataset after all cleaning processes.*
+
 
 
 ### 2.3. Analyzing Data
 
-Insert text here.
+I created a pivot table using my dataset. My row was the “year” values and my columns were the “type of production values”. For my values, I used the “Production $ left in Ontario values”.
 
-**This section should include a screen capture of your pivot table, like so:**
+Furthermore, I used this pivot table to create a line chart to present my data in a more sophisticated way.
 
-![](pivot-table-screen-capture.png)<br>
-*Figure 2: This pivot table shows...*
+I used these variables specifically because I wanted to see the difference of increase in money spent on both types of production during this 20 year period between 2004 and 2024.
 
-**This section should also include a screen capture of your exploratory chart, like so:**
 
-![](chart-screen-capture.png)<br>
-*Figure 3: This exploratory chart shows...*
+<img src="pivot-table.png" width="350"> <br>
+*Figure 2: This pivot table shows the amount of money spent on each type of production each year*
+
+
+<img src="line-chart.png" width="600"> <br>
+*Figure 3: This exploratory chart shows difference in money spent on Feature Films vs. Television Series from 2004 to 2024*
+
+One statistic that stands out is that the Television Series sector massively recovered in 2021 (2,291,500,000 CAD dollars) after the drop in 2020 (1,031,000,000 CAD dollars) which was due to the pandemic.
+
+The potential story here is that the “Television Series” sector has been getting bigger each year since 2004 while the “Feature Film’ sector has been largely stagnant. 
+
+In 2007, the numbers for each sector were quite close. Feature Films had 300,600,000 CAD dollars spent on its productions while Television Series had 342,100,000 CAD dollars spent. 
+
+The changing point came the following year in 2008. Feature Films’ numbers decreased to 105,600,000 CAD dollars while Television Series numbers rose to 469,500,000 CAD dollars. From that point onwards, Television Series completely dominated the industry in Ontario and have continued to rise each year reaching 2,033,700,000 CAD dollars in 2024.
+
+A value that would warrant further investigation would be the decrease in production money spent on Television Series from 2022 to 2023. From 2004 to the pandemic, the numbers increased every year and after the recovery in 2021, 2022 was the highest value recorded since 2004. The following year, there was a 46% decrease in production money spent from 2,552,000,000 CAD dollars in 2022 to 1,369,500,000 CAD dollars in 2023. The numbers recovered again in 2024 with a 2,033,700,000 CAD dollars total. The question here would be “what happened in 2023 that caused this large drop?”
+
+I calculated that 46% decrease using the percentage decrease formula which is (Original Value - New Value) / New Value * 100 and I applied that formula to the appropriate cells needed in my pivot table which resulted in = (C21 - C22) / C21 * 100.
+
 
 ## 3. Delivering Data
 
-Insert text here.
+I would need to research some factors regarding the growth of the Television series sector in Ontario. 
+
+One of these factors would be the introduction of streaming platforms such Netflix, which launched in Canada in 2010. These platforms may have increased the demand for television series production which could be one of the main reasons for the industry’s growth. Another factor would be the writers’ strike in 2023, which could be an important reason for the decline that year.
+
+Another factor I would like to investigate is the impact of government tax incentives. Ontario offers financial incentives to eligible production companies that film in the province. These incentives can help reduce production costs and encourage both domestic and foreign companies to choose Ontario as their filming location.
+
+I could interview a television producer who can further explain the effects streaming platforms had on the industry. Another person I can interview would be a representative from Ontario Creates who can provide more information about the statistics provided on the website and explain industry trends.
+
 
 ## 4. References
 
