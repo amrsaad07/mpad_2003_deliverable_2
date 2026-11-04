@@ -5,7 +5,6 @@
 
 # Deliverable 2: Exploratory Data Analysis (EDA)
 
-Use one hashtag symbol (`#`) to create a level 1 heading like this one.
 
 ## Foreword
 
@@ -25,11 +24,11 @@ And to create an unordered list, we simply put a star (`*`) before each item.
 ## 1. Getting Data
 
 ### 1.1. Context
-I will be analyzing a dataset that provides information about the amount of film and TV productions in Ontario from 2004 to 2024. This information includes the type of production, the year it was produced, if it is domestic or foreign, and the amount of money spent on each type.
+I will be analyzing a dataset that provides information about the amount of film and TV productions in Ontario from 2004 to 2024. This information includes the type of production, the year it was produced, if it is domestic or foreign, and the amount of money spent on each type of production.
 
 * [Link for my original dataset](https://www.ontariocreates.ca/uploads/About-Us/Eng/open-dataontario-film-and-tv-production-by-type-or-production-Dec-2025.xlsx)
 
-I downloaded the dataset as a xlsx file on my device, then imported it on Google Sheets by pressing file, import, upload, then locating the file on my device, and lastly pressing import data into a new spreadsheet.
+I downloaded the dataset as a xlsx file on my device, then imported it on Google Sheets by pressing *file* -> *import* -> *upload*, then locating the file on my device, and lastly pressing *import data* into a new spreadsheet.
 
 
 <img src="after-import.png" width="800"> <br>
@@ -42,7 +41,7 @@ I downloaded the dataset as a xlsx file on my device, then imported it on Google
 
 There are 5 columns and 126 rows
 
-The data looks clean excluding one column. For the “Production $ Left in Ontario” column, it would be easier if the values were formatted in a better way. For example, adding commas between numbers so users can differentiate if this is a value in the thousands, millions, or even higher.
+The data looks clean excluding one column. For the *Production $ Left in Ontario* column, it would be easier if the values were formatted in a better way. For example, adding commas between numbers so users can differentiate if this is a value in the thousands, millions, or even higher.
 
 ### 1.3. Specific Observations
 
@@ -80,18 +79,18 @@ I did a bar chart with the data I have to detect invalid values, and that made m
 
 I used the find and replace tool to correct the misspelled values. 
 
-Television Series was spelled as “Televison”, so I corrected that.
+*Television Series* was spelled as *Televison Series*, so I corrected that.
 
 <img src="find-replace1.png" width="350"> <br>
 
 *Figure 3: Screen capture of Find & Replace method used.*
 
-"Mini-series" had a hyphen while some values did not, so I corrected that too.
+*Mini-series* had a hyphen while some values did not, so I corrected that too.
 
 <img src="find-replace2.png" width="350"> <br>
 *Figure 4: Screen capture of Find & Replace method used.*
 
-I then exported my sheet and uploaded it into OpenRefine. I changed the row number from 50 to 500 so my entire dataset appears. I then pressed on the “Type of Production” column and selected “Text Filter” from the dropdown menu. I copy pasted the “Television movies, Mini-Series, Special, Pilots” value in the text input and then pressed “invert”. I decided to remove all rows with this value because I thought they were unnecessary for the rest of this project. Then, I exported my dataset from “OpenRefine” as an .xls file and reuploaded it into my Google Sheets file. When uploading, I added it into a new sheet named “After OpenRefine Edits” so it is clear that this is the latest version of my dataset.
+I then exported my sheet and uploaded it into *OpenRefine*. I changed the row number from 50 to 500 so my entire dataset appears. I then pressed on the *Type of Production* column and selected *Text Filter* from the dropdown menu. I copy pasted the *Television movies, Mini-Series, Special, Pilots* value in the text input and then pressed *invert*. I decided to remove all rows with this value because I thought they were unnecessary for the rest of this project. Then, I exported my dataset from *OpenRefine* as an .xls file and reuploaded it into my Google Sheets file. When uploading, I added it into a new sheet named *After OpenRefine Edits* so it is clear that this is the latest version of my dataset.
 
 
 <img src="open-refine.png" width="800"> <br>
@@ -102,11 +101,27 @@ Then I froze the first row and bolded the values so it is clear that all text in
 <img src="after-cleaning.png" width="800"> <br>
 *Figure 6: Screen capture of dataset after all cleaning processes.*
 
+I had to also fix the formatting of my numbers after reuploading my updated sheet because the total was not working correctly in my pivot table.
+
+My 2020 values were labelled like this 161.5*10^6 instead of 161500000, so I manually fixed them by searching the full number on a calculator.
+
+While creating my pivot table, I also noticed that there is a *currency rounded* option to display my values under the *Production $ Left in Ontario* column, so I chose that so these values are easier to read.
+
+I noticed that some *Television Series* and *Feature Film* values had an extra white space character in front of them, so I fixed that using the Find and Replace method.
+
+<img src="find-replace3.png" width="350"> <br>
+
+*Figure 7: Screen capture of Find & Replace method used.*
+
+
+<img src="find-replace4.png" width="350"> <br>
+*Figure 8: Screen capture of Find & Replace method used.*
+
 
 
 ### 2.3. Analyzing Data
 
-I created a pivot table using my dataset. My row was the “year” values and my columns were the “type of production values”. For my values, I used the “Production $ left in Ontario values”.
+I created a pivot table using my dataset. My row was the *year* values and my columns were the *type of production values*. For my values, I used the *Production $ left in Ontario* values.
 
 Furthermore, I used this pivot table to create a line chart to present my data in a more sophisticated way.
 
@@ -120,15 +135,15 @@ I used these variables specifically because I wanted to see the difference of in
 <img src="line-chart.png" width="600"> <br>
 *Figure 3: This exploratory chart shows difference in money spent on Feature Films vs. Television Series from 2004 to 2024*
 
-One statistic that stands out is that the Television Series sector massively recovered in 2021 (2,291,500,000 CAD dollars) after the drop in 2020 (1,031,000,000 CAD dollars) which was due to the pandemic.
+One statistic that stands out is that the Television Series sector massively recovered in 2021 (\$2,291,500,000) after the drop in 2020 (\$1,031,000,000) which was due to the pandemic.
 
-The potential story here is that the “Television Series” sector has been getting bigger each year since 2004 while the “Feature Film’ sector has been largely stagnant. 
+The potential story here is that the Television Series sector has been getting bigger each year since 2004 while the Feature Film sector has been largely stagnant. 
 
-In 2007, the numbers for each sector were quite close. Feature Films had 300,600,000 CAD dollars spent on its productions while Television Series had 342,100,000 CAD dollars spent. 
+In 2007, the numbers for each sector were quite close. Feature Films had \$300,600,000 spent on its productions while Television Series had \$342,100,000 spent. 
 
-The changing point came the following year in 2008. Feature Films’ numbers decreased to 105,600,000 CAD dollars while Television Series numbers rose to 469,500,000 CAD dollars. From that point onwards, Television Series completely dominated the industry in Ontario and have continued to rise each year reaching 2,033,700,000 CAD dollars in 2024.
+The changing point came the following year in 2008. Feature Films’ numbers decreased to \$105,600,000 while Television Series numbers rose to \$469,500,000. From that point onwards, Television Series completely dominated the industry in Ontario and have continued to rise each year reaching \$2,033,700,000 in 2024.
 
-A value that would warrant further investigation would be the decrease in production money spent on Television Series from 2022 to 2023. From 2004 to the pandemic, the numbers increased every year and after the recovery in 2021, 2022 was the highest value recorded since 2004. The following year, there was a 46% decrease in production money spent from 2,552,000,000 CAD dollars in 2022 to 1,369,500,000 CAD dollars in 2023. The numbers recovered again in 2024 with a 2,033,700,000 CAD dollars total. The question here would be “what happened in 2023 that caused this large drop?”
+A value that would warrant further investigation would be the decrease in production money spent on Television Series from 2022 to 2023. From 2004 to the pandemic, the numbers increased every year and after the recovery in 2021, 2022 was the highest value recorded since 2004. The following year, there was a 46% decrease in production money spent from \$2,552,000,000 in 2022 to \$1,369,500,000 in 2023. The numbers recovered again in 2024 with a \$2,033,700,000 total. The question here would be “what happened in 2023 that caused this large drop?”
 
 I calculated that 46% decrease using the percentage decrease formula which is (Original Value - New Value) / New Value * 100 and I applied that formula to the appropriate cells needed in my pivot table which resulted in = (C21 - C22) / C21 * 100.
 
