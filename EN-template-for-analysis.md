@@ -1,4 +1,4 @@
-**November 5th,2026**<br>
+**November 5th, 2026**<br>
 **MPAD2003A Introductory Data Storytelling**<br>
 **Amr Saad**<br>
 **Presented to Jean-Sébastien Marier**<br>
@@ -6,20 +6,7 @@
 # Deliverable 2: Exploratory Data Analysis (EDA)
 
 
-## Foreword
 
-For this assignment, you must clean and analyze the dataset from Deliverable 1, create exploratory charts/visualizations, and identify a potential story. Your assignment must clearly detail your process. You are expected to write about 1,000-1,200 words, and to include several screen captures showing the different steps you went through. Your assignment must be written with the Markdown format and submitted on GitHub.
-
-I have been assigning different versions of this project to my digital journalism and data storytelling students for a few years now. Its structure was inspired by the main sections/chapters of [*The Data Journalism Handbook*](https://datajournalism.com/read/handbook/one/). This version was further inspired by the [Key Capabilities in Data Science](https://extendedlearning.ubc.ca/programs/key-capabilities-data-science) program offered by the University of British Columbia (UBC).
-
-**Here are some useful resources for this assignment:**
-
-* [GitHub's *Basic writing and formatting syntax* page](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-* [The template repository for this assignment in case you delete something by mistake](https://github.com/jsmarier/jou4100_jou4500_mpad2003_project2_template)
-
-Did you notice how to create a hyperlink? In Markdown, we put the clickable text between square brackets and the actual URL between parentheses.
-
-And to create an unordered list, we simply put a star (`*`) before each item.
 
 ## 1. Getting Data
 
@@ -71,9 +58,51 @@ I picked that timeframe specifically because it was around the same time Netflix
 I did a bar chart with the data I have to detect invalid values, and that made me notice that some values in column c are misspelled which results in them getting duplicated in the chart.
 
 <img src="bar-chart.png" width="500"> <br>
-
-
 *Figure 2: Bar chart of dataset.*
+
+
+### V
+The variables are sufficient to identify and compare trends in Feature Films and Television Series from 2004 - 2024.
+
+The dataset includes the important variables, particularly number of projects and production spending.
+
+I think these columns are all useful because they provide sufficient information needed for any comparisons. 
+
+I prefer having the ability to hide unnecessary rows than explore alternative sources for certain data
+
+For example, I hid all rows containing “Television movies, Mini-Series, Special, Pilots” since I thought they were unnecessary for the story I am trying to explore
+
+I wanted to see a direct comparison between the two main types of production which were Feature Films and Television series, which is why I filtered out those rows when cleaning my data with OpenRefine
+
+### I
+No invalid values were found.
+
+All years, project numbers, and production spending looked reasonable
+
+The main issues identified were regarding the formatting and spelling inconsistencies rather than incorrect values
+
+The misspelled categories caused Google sheets to interpret “Television Series” as “Televison Series “
+
+This then led to a misleading representation of my data in this bar chart
+
+
+### M
+
+All five columns contained values
+
+No empty cells were identified
+
+### O
+Only 2 values stood out but they wouldn’t be considered outliers 
+
+The production spending total for Television Series in 2020 declined 41% from 2019 which may be associated with the pandemic
+
+The production spending total for Television Series in 2023 also declined 46% which may be associated with the writers’ strike which lasted five months
+
+These decreases seemed reasonable with the circumstances that occurred at the time 
+
+
+
 
 ### 2.2. Cleaning Data
 
@@ -125,15 +154,21 @@ I created a pivot table using my dataset. My row was the *year* values and my co
 
 Furthermore, I used this pivot table to create a line chart to present my data in a more sophisticated way.
 
+A line chart shows the differences in total money spent on each type of production and it clearly shows how Television series increased a lot more throughout the years than Feature Films
+
+
+One of the limitations of my data is that these numbers are not adjusted for inflation.
+
+
 I used these variables specifically because I wanted to see the difference of increase in money spent on both types of production during this 20 year period between 2004 and 2024.
 
 
 <img src="pivot-table.png" width="350"> <br>
-*Figure 2: This pivot table shows the amount of money spent on each type of production each year*
+*Figure 9: This pivot table shows the amount of money spent on each type of production each year*
 
 
 <img src="line-chart.png" width="600"> <br>
-*Figure 3: This exploratory chart shows difference in money spent on Feature Films vs. Television Series from 2004 to 2024*
+*Figure 10: This exploratory chart shows difference in money spent on Feature Films vs. Television Series from 2004 to 2024*
 
 One statistic that stands out is that the Television Series sector massively recovered in 2021 (\$2,291,500,000) after the drop in 2020 (\$1,031,000,000) which was due to the pandemic.
 
@@ -143,26 +178,39 @@ In 2007, the numbers for each sector were quite close. Feature Films had \$300,6
 
 The changing point came the following year in 2008. Feature Films’ numbers decreased to \$105,600,000 while Television Series numbers rose to \$469,500,000. From that point onwards, Television Series completely dominated the industry in Ontario and have continued to rise each year reaching \$2,033,700,000 in 2024.
 
-A value that would warrant further investigation would be the decrease in production money spent on Television Series from 2022 to 2023. From 2004 to the pandemic, the numbers increased every year and after the recovery in 2021, 2022 was the highest value recorded since 2004. The following year, there was a 46% decrease in production money spent from \$2,552,000,000 in 2022 to \$1,369,500,000 in 2023. The numbers recovered again in 2024 with a \$2,033,700,000 total. The question here would be “what happened in 2023 that caused this large drop?”
+A value that would warrant further investigation would be the decrease in production money spent on Television Series from 2022 to 2023. From 2004 to the pandemic, the numbers increased through the years and after the recovery in 2021, 2022 was the highest value recorded since 2004. The following year, there was a 46% decrease in production money spent from \$2,552,000,000 in 2022 to \$1,369,500,000 in 2023. The numbers recovered again in 2024 with a \$2,033,700,000 total. The question here would be “what happened in 2023 that caused this large drop?”
 
-I calculated that 46% decrease using the percentage decrease formula which is (Original Value - New Value) / New Value * 100 and I applied that formula to the appropriate cells needed in my pivot table which resulted in = (C21 - C22) / C21 * 100.
+I calculated that 46% decrease using the percentage decrease formula which is (Original Value - New Value) / Original Value * 100 and I applied that formula to the appropriate cells needed in my pivot table which resulted in = (C21 - C22) / C21 * 100.
 
 
 ## 3. Delivering Data
 
 I would need to research some factors regarding the growth of the Television series sector in Ontario. 
 
-One of these factors would be the introduction of streaming platforms such Netflix, which launched in Canada in 2010. These platforms may have increased the demand for television series production which could be one of the main reasons for the industry’s growth. Another factor would be the writers’ strike in 2023, which could be an important reason for the decline that year.
+One of these factors would be the introduction of streaming platforms such Netflix, which launched in Canada in 2010 (Erlichman, 2020) . These platforms may have increased the demand for television series production which could be one of the main reasons for the industry’s growth. Between 2017 and 2020, Netflix invested $2.5 billion into productions of films and tv shows in Canada (Cardin, 2021).
 
-Another factor I would like to investigate is the impact of government tax incentives. Ontario offers financial incentives to eligible production companies that film in the province. These incentives can help reduce production costs and encourage both domestic and foreign companies to choose Ontario as their filming location.
+Another factor would be the writers’ strike in 2023, which could be an important reason for the decline that yearr (Los Angeles Times Staff, 2023). 
+
+
+ Furthermore, I would like to investigate is the impact of government tax incentives. Ontario offers financial incentives to eligible production companies that film in the province (Ontario Creates, 2020). These incentives can help reduce production costs and encourage both domestic and foreign companies to choose Ontario as their filming location.
 
 I could interview a television producer who can further explain the effects streaming platforms had on the industry. Another person I can interview would be a representative from Ontario Creates who can provide more information about the statistics provided on the website and explain industry trends.
 
 
 ## 4. References
 
-Include a list of your references here. Please follow [APA](https://apastyle.apa.org/style-grammar-guidelines/references) or [MLA](https://www.mla.org/MLA-Style) guidelines for references. Hanging paragraphs aren't required though.
+Cardin, S. (2021). *Submission to the Standing Committee on Canadian Heritage .* https://www.ourcommons.ca/Content/Committee/432/CHPC/Brief/BR11157882/br-external/Netflix-e.pdf 
 
-**Here's an example:**
+Erlichman, J. (2020, September 22). *10 Years on: How Netflix in Canada has evolved a decade later.* BNN Bloomberg. https://www.bnnbloomberg.ca/business/technology/2020/09/22/10-years-on-how-netflix-in-canada-has-evolved-a-decade-later/ 
 
-Bounegru, L., & Gray, J. (Eds.). (2021). *The Data Journalism Handbook 2: Towards A Critical Data Practice*. Amsterdam University Press. [https://ocul-crl.primo.exlibrisgroup.com/permalink/01OCUL_CRL/hgdufh/alma991022890087305153](https://ocul-crl.primo.exlibrisgroup.com/permalink/01OCUL_CRL/hgdufh/alma991022890087305153)
+Los Angeles Times Staff. (2023, October 19). *Writers’ strike: What happened, how it ended and its impact on Hollywood.* Los Angeles Times. https://www.latimes.com/entertainment-arts/business/story/2023-05-01/writers-strike-what-to-know-wga-guild-hollywood-productions 
+
+
+Open data. (2020, May 4). Ontario Creates. https://www.ontariocreates.ca/research/statistics/open-data-1 
+
+
+Tax credits. (2020, March 9). Ontario Creates. https://www.ontariocreates.ca/our-sectors/film-tv/tax-credits 
+
+
+
+
